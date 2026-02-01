@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DarkVerse</title><!-- Fonts --><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"><style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:radial-gradient(circle at top left,#3b145f,#0a0212 70%);
+  color:white;
+}
+
+.app{
+  max-width:420px;
+  min-height:100vh;
+  margin:auto;
+  padding:20px;
+  position:relative;
+}
+
+.hidden{
+  display:none;
+}
+
+/* ================= PAGE 1 ================= */
+#page1{
+  text-align:center;
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.logo{
+  width:40px;
+  height:40px;
+  border-radius:10px;
+}
+
+.version{
+  background:rgba(255,255,255,.1);
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:12px;
+}
+
+.banner{
+  width:100%;
+  height:220px;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 0 30px rgba(160,80,255,.5);
+}
+
+.banner video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.title-box{
+  margin-top:-40px;
+  display:inline-block;
+  background:rgba(0,0,0,.6);
+  padding:10px 25px;
+  border-radius:25px;
+  font-family:'Orbitron',sans-serif;
+  font-size:22px;
+  letter-spacing:2px;
+  backdrop-filter:blur(6px);
+}
+
+.btn{
+  width:100%;
+  padding:14px;
+  border-radius:14px;
+  border:none;
+  font-weight:600;
+  letter-spacing:1px;
+  cursor:pointer;
+}
+
+.btn-main{
+  margin-top:35px;
+  background:linear-gradient(90deg,#8f3bff,#c26bff);
+  color:white;
+  box-shadow:0 0 15px rgba(170,90,255,.6);
+}
+
+.btn-outline{
+  margin-top:15px;
+  background:transparent;
+  border:1px solid #8f3bff;
+  color:#caa6ff;
+}
+
+.footer{
+  position:absolute;
+  bottom:25px;
+  left:0;
+  right:0;
+  font-size:12px;
+  opacity:.7;
+}
+
+/* ================= PAGE 2 ================= */
+#page2{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.login-card{
+  width:100%;
+  background:rgba(15,5,30,.95);
+  border-radius:22px;
+  padding:30px 25px;
+  text-align:center;
+  box-shadow:0 0 40px rgba(160,80,255,.5);
+}
+
+.avatar{
+  width:90px;
+  height:90px;
+  margin:-70px auto 15px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#8f3bff,#c26bff);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.avatar img{
+  width:82px;
+  height:82px;
+  border-radius:50%;
+}
+
+.login-title{
+  font-family:'Orbitron',sans-serif;
+  font-size:26px;
+  letter-spacing:2px;
+}
+
+.login-sub{
+  font-size:13px;
+  opacity:.7;
+  margin-bottom:25px;
+}
+
+.input-box{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(200,150,255,.2);
+  border-radius:12px;
+  padding:12px 14px;
+  display:flex;
+  align-items:center;
+  margin-bottom:15px;
+}
+
+.input-box input{
+  flex:1;
+  background:transparent;
+  border:none;
+  outline:none;
+  color:white;
+  margin-left:8px;
+}
+
+.login-btn{
+  margin-top:10px;
+}
+</style></head>
+<body><div class="app"><!-- ================= PAGE 1 ================= --><div id="page1">  <div class="header">
+    <img src="logo.png" class="logo">
+    <div class="version">V4.0</div>
+  </div>  <div class="banner">
+    <video autoplay loop muted playsinline>
+      <source src="banner.mp4" type="video/mp4">
+    </video>
+  </div>  <div class="title-box">DarkVerse</div><button class="btn btn-main" onclick="goLogin()">→ Login</button> <button class="btn btn-outline">✦ Buy Access</button>
+
+  <div class="footer">
+    © 2025 DarkVerse - All Rights Reserved
+  </div></div><!-- ================= PAGE 2 ================= --><div id="page2" class="hidden">  <div class="login-card"><div class="avatar">
+  <img src="avatar.jpg">
+</div>
+
+<div class="login-title">DarkVerse</div>
+<div class="login-sub">Please Log-in</div>
+
+<div class="input-box">
+  👤 <input type="text" placeholder="Username">
+</div>
+
+<div class="input-box">
+  🔒 <input type="password" placeholder="Password">
+</div>
+
+<button class="btn btn-main login-btn">LOGIN</button>
+
+  </div></div></div><script>
+function goLogin(){
+  document.getElementById('page1').classList.add('hidden');
+  document.getElementById('page2').classList.remove('hidden');
+}
+</script></body>
+</html>
